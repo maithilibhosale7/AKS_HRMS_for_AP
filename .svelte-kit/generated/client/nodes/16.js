@@ -1,1 +1,0 @@
-export { default as component } from "../../../../src/routes/KRA_KPI_Trans_Edit/+page.svelte";
