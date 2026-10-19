@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="258.048 165.888 440.832 440.832" id="svg2" version="1.1" style="max-height: 500px" width="440.832" height="440.832">
+  <defs id="defs6"/>
+  
+  <g transform="matrix(1.3333333,0,0,-1.3333333,0,768)" id="g8">
+    <g transform="translate(342.7115,258.5589)" id="g10">
+      <path id="path12" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="M 0,0 14.675,-14.653 -36.489,-65.892 10.835,-113.148 -1.009,-125.009 -63.008,-63.1 Z"/>
+    </g>
+    <g transform="translate(452.1169,367.9335)" id="g14">
+      <path id="path16" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="M 0,0 61.909,-61.999 50.047,-73.843 2.792,-26.519 -48.447,-77.683 -63.1,-63.008 Z"/>
+    </g>
+    <g transform="translate(440.1509,195.4922)" id="g18">
+      <path id="path20" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 -61.999,-61.909 -11.844,11.862 47.324,47.255 -51.164,51.239 14.675,14.653 z"/>
+    </g>
+    <g transform="translate(330.8422,305.0086)" id="g22">
+      <path id="path24" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="M 0,0 -14.653,-14.675 -65.892,36.489 -113.147,-10.835 -125.009,1.009 -63.1,63.008 Z"/>
+    </g>
+    <g transform="translate(377.1001,316.8332)" id="g26">
+      <path id="path28" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="M 0,0 -14.675,14.653 36.489,65.892 -10.835,113.147 1.009,125.009 63.008,63.1 Z"/>
+    </g>
+    <g transform="translate(267.6139,207.4349)" id="g30">
+      <path id="path32" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="M 0,0 -61.909,61.999 -50.047,73.843 -2.792,26.519 48.447,77.683 63.1,63.008 Z"/>
+    </g>
+    <g transform="translate(279.6275,380.0164)" id="g34">
+      <path id="path36" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="M 0,0 61.999,61.909 73.843,50.047 26.519,2.792 77.683,-48.447 63.008,-63.1 Z"/>
+    </g>
+    <g transform="translate(388.9552,270.4571)" id="g38">
+      <path id="path40" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="M 0,0 14.653,14.675 65.892,-36.489 113.147,10.835 125.009,-1.009 63.1,-63.008 Z"/>
+    </g>
+  </g>
+</svg>

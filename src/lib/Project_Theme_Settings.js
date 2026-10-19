@@ -1,0 +1,654 @@
+export const Project_Theme_Settings = {
+
+    client_logo : '/img/asian_logo.svg',
+    client_loader_icon : '/img/loader_icon.svg',
+
+    // Softened Gray Palette
+    header_color : '#1E2025', 
+    sidebar_color : '#25272D',
+    component_color : '#2D2F36',
+    
+    nav_menu: {
+        main_bg: '#1E2025',
+        main_text: '#F3F4F6',
+        heading_text: '#F3F4F6',
+        heading_icon: '#B6F09C', // Keeping the Lime Green accent
+        sub_text: '#9CA3AF',
+        sub_active_bg: '#374151',
+        sub_active_text: '#B6F09C'
+    },
+
+    notifications: {
+        dot_color:      '#EF4444',   // matches existing mandatory_mark_color
+        dot_halo_color: '#EF4444',   // pulse halo (rgba applied in component)
+        priority_colors: { Urgent: '#EF4444', High: '#F97316', Medium: '#F59E0B', Low: '#9CA3AF' },
+    },
+
+    toasts: {
+        bottom:        '5em',
+        border_radius: '0.6em',
+        font_size:     '0.875em',
+        min_width:     '280px',
+        // success
+        success_bg:     '#dcfce7',
+        success_border: '#16a34a',
+        success_color:  '#14532d',
+        // error
+        error_bg:       '#fee2e2',
+        error_border:   '#dc2626',
+        error_color:    '#7f1d1d',
+        // warn  (overrides library default)
+        warn_bg:        '#fef9c3',
+        warn_border:    '#ca8a04',
+        warn_color:     '#713f12',
+        // info  (overrides library default)
+        info_bg:        '#dbeafe',
+        info_border:    '#2563eb',
+        info_color:     '#1e3a8a',
+    },
+
+    AKS_Logo : '/img/logo.svg',
+    login_background_image : '/img/login_img.jpg',
+
+    linked_display_color : '#374151',
+    User_Input : '#6b6b6b',
+    Auto_populated : '#5d5c5c',
+    Card_Bg: '#6e7178',
+
+    linked_card: {
+        max_columns_for_full_width: 3,
+        fixed_width: '200px',
+        selection_fixed_width: '250px',
+        modal_column: {
+            max_width: '400px'
+        }
+    },
+
+    component_styles: {
+        field_container: {
+            flex: 'flex-none',
+            padding: 'p-2',
+            background: 'transparent'
+        },
+        form_container: {
+            background: '#25272D',
+            border_radius: '12px',
+            padding: '16px',
+            max_height: 'calc(100vh - 12rem)'
+        },
+        label: {
+            text_color: '#D1D5DB',
+            font_size: '14px',
+            font_weight: '500',
+            border_size: '1px',
+            border_style: 'solid',
+            border_color: 'transparent',
+            border_radius: '6px',
+            padding: '4px 8px',
+            margin_bottom: '6px'
+        },
+        input: {
+            text_color: '#090909',
+            font_size: '14px',
+            font_weight: '400',
+            border_size: '1px',
+            border_style: 'solid',
+            border_color: '#4B5563',
+            border_radius: '8px',
+            padding: '10px 12px',
+            min_height: '50px',
+            background: '#f9f9f9'
+        },
+        input_readonly: {
+            text_color: '#000000',
+            background: '#fbfcff',
+            border_color: '#3F444E'
+        },
+        mandatory_mark: {
+            text_color: '#B6F09C', 
+            font_size: '14px',
+            font_weight: '700'
+        },
+
+        dropdown_option: {
+            text_color: '#0f0e0e',
+            font_size: '14px',
+            font_weight: '400',
+            selected_font_weight: '600',
+
+            active_bg: '#B6F09C',
+            active_text: '#1E2025',
+
+            check_icon_color: '#B6F09C',
+            check_icon_active_color: '#1E2025',
+
+            others_text_color: '#B6F09C',
+            others_active_bg: '#B6F09C',
+            others_active_text: '#1E2025',
+
+            no_match_text: '#9CA3AF'
+        },
+
+        // --- Unified field wrapper (every AKS_* component wraps in this) ---
+        field_wrapper: {
+            border_left_width: '3px',
+            border_radius: '8px',
+            background: '#FFFFFF',
+            padding: '12px',
+            gap: '6px',
+            transition: 'all 0.2s ease',
+            hover_shadow: '0 1px 3px rgba(0,0,0,0.08)',
+            focus_within_shadow: '0 0 0 2px rgba(59,130,246,0.15)',
+        },
+
+        // --- Label row (sits above every input) ---
+        label_row: {
+            height: '24px',
+            icon_size: '14px',
+            icon_margin_right: '6px',
+            font_size: '0.8rem',
+            font_weight: '600',
+            letter_spacing: '0.02em',
+            text_transform: 'uppercase',
+            mandatory_mark_color: '#EF4444',
+            mandatory_mark_size: '0.85rem',
+        },
+
+        // --- Input area (stretches to fill remaining height) ---
+        input_area: {
+            min_height: '42px',
+            border_width: '1px',
+            border_color: '#D1D5DB',
+            border_radius: '6px',
+            padding: '8px 12px',
+            font_size: '0.875rem',
+            font_weight: '400',
+            text_color: '#111827',
+            background: '#FFFFFF',
+            placeholder_color: '#9CA3AF',
+            // Focus state
+            focus_border_color: '#3B82F6',
+            focus_ring_color: 'rgba(59,130,246,0.2)',
+            focus_ring_width: '3px',
+            // Readonly state
+            readonly_background: '#F9FAFB',
+            readonly_border_color: '#E5E7EB',
+            readonly_text_color: '#6B7280',
+            // Disabled state (future-proofing)
+            disabled_background: '#F3F4F6',
+            disabled_text_color: '#9CA3AF',
+            disabled_border_color: '#E5E7EB',
+        },
+
+        // --- DataEntry container chrome ---
+        form_header: {
+            background: '#F9FAFB',
+            border_color: '#E5E7EB',
+            title_color: '#111827',
+            subtitle_color: '#6B7280',
+            save_button: {
+                background: '#4F46E5',
+                hover_background: '#4338CA',
+                text_color: '#FFFFFF',
+                border_radius: '6px',
+                font_weight: '600',
+            },
+            cancel_button: {
+                background: '#FFFFFF',
+                hover_background: '#F9FAFB',
+                text_color: '#374151',
+                border_color: '#D1D5DB',
+                border_radius: '6px',
+                font_weight: '500',
+            },
+        },
+
+        // --- Scrollbar ---
+        scrollbar: {
+            width: '6px',
+            thumb_color: '#CBD5E1',
+            thumb_hover_color: '#94A3B8',
+            track_color: 'transparent',
+            border_radius: '3px',
+        },
+
+        // --- Legend dots ---
+        legend: {
+            dot_size: '10px',
+            gap: '12px',
+            font_size: '0.7rem',
+            text_color: '#6B7280',
+        },
+
+        // --- Percentage suffix ---
+        percentage_suffix: {
+            font_size: '0.875rem',
+            font_weight: '600',
+            color: '#374151',
+            margin_left: '8px',
+        },
+
+        // --- Attachment-specific ---
+        attachment: {
+            drag_zone: {
+                border_width: '2px',
+                border_style: 'dashed',
+                border_radius: '8px',
+                padding: '16px',
+                idle_border_color: '#D1D5DB',
+                idle_background: '#FFFFFF',
+                active_border_color: '#3B82F6',
+                active_background: '#EFF6FF',
+                icon_color: '#9CA3AF',
+            },
+            progress_bar: {
+                height: '6px',
+                background: '#E5E7EB',
+                fill_color: '#3B82F6',
+                border_radius: '3px',
+            },
+            file_list: {
+                background: '#FFFFFF',
+                border_color: '#E5E7EB',
+                border_radius: '6px',
+                divider_color: '#F3F4F6',
+                filename_font: 'monospace',
+                filename_size: '0.75rem',
+                download_color: '#2563EB',
+                download_hover: '#1D4ED8',
+                remove_color: '#EF4444',
+                remove_hover: '#DC2626',
+            },
+        },
+
+        // --- Dropdown additions ---
+        dropdown_extras: {
+            trigger_min_height: '42px',
+            panel_shadow: '0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1)',
+            panel_border_radius: '8px',
+            panel_border_color: '#E5E7EB',
+            panel_background: '#FFFFFF',
+            search_border_color: '#D1D5DB',
+            search_background: '#FFFFFF',
+            others_panel_background: '#EFF6FF',
+            others_panel_border: '#BFDBFE',
+            others_input_border: '#93C5FD',
+            others_input_text: '#1E3A5F',
+            others_input_placeholder: '#93C5FD',
+            no_match_color: '#9CA3AF',
+        },
+
+        // --- Linked card components ---
+        linked_card_extras: {
+            card_border_color: '#E5E7EB',
+            card_border_style: 'solid',
+            card_border_radius: '8px',
+            card_background: '#FFFFFF',
+            card_hover_background: '#F9FAFB',
+            card_shadow: '0 1px 2px rgba(0,0,0,0.05)',
+            card_hover_shadow: '0 2px 4px rgba(0,0,0,0.1)',
+            header_text_color: '#6B7280',
+            header_font_size: '0.7rem',
+            header_font_weight: '600',
+            header_text_transform: 'uppercase',
+            header_letter_spacing: '0.05em',
+            value_text_color: '#111827',
+            value_font_size: '0.875rem',
+            value_font_weight: '500',
+            // Empty state
+            empty_border_color: '#E5E7EB',
+            empty_border_style: 'dashed',
+            empty_background: '#F9FAFB',
+            empty_text_color: '#9CA3AF',
+            empty_icon_color: '#D1D5DB',
+            // Remove button
+            remove_border_color: '#FCA5A5',
+            remove_background: '#FEF2F2',
+            remove_text_color: '#EF4444',
+            remove_hover_background: '#FEE2E2',
+            // Modal action buttons
+            action_add:    { bg: '#EFF6FF', text: '#2563EB', border: '#BFDBFE', hover_bg: '#DBEAFE' },
+            action_edit:   { bg: '#F0FDF4', text: '#16A34A', border: '#BBF7D0', hover_bg: '#DCFCE7' },
+            action_delete: { bg: '#FEF2F2', text: '#EF4444', border: '#FECACA', hover_bg: '#FEE2E2' },
+            action_select: { bg: '#4F46E5', text: '#FFFFFF', border: '#4338CA', hover_bg: '#4338CA' },
+            action_close:  { bg: '#6B7280', text: '#FFFFFF', border: '#4B5563', hover_bg: '#4B5563' },
+        },
+
+        tableview: {
+            // --- Container ---
+            container: {
+                background:    '#FFFFFF',
+                border_color:  '#D1D5DB',
+                border_radius: '0.5rem',
+            },
+
+            // --- Toolbar (search bar outer wrapper) ---
+            toolbar: {
+                background:    '#F9FAFB',
+                border_color:  '#E5E7EB',
+                border_radius: '0.5rem',
+                chip_border_color: '#F3F4F6',   // border-t above chip row
+                divider_color: '#D1D5DB',        // vertical divider between filter and selection chip groups
+                label_color:   '#6B7280',        // "Filters:" / "Selected:" uppercase labels
+            },
+
+            // --- Search input ---
+            search: {
+                icon_color:           '#9CA3AF',
+                text_color:           '#111827',
+                placeholder_color:    '#9CA3AF',
+                clear_button_color:   '#9CA3AF',
+                clear_button_hover:   '#EF4444',
+            },
+
+            // --- Count badges (filter count, selected count) ---
+            filter_badge: {
+                background: '#DBEAFE',
+                text_color: '#1D4ED8',
+            },
+            selection_badge: {
+                background:   '#EEF2FF',
+                text_color:   '#4338CA',
+                border_color: '#C7D2FE',
+            },
+
+            // --- Filter chips ---
+            filter_chip: {
+                background:        '#FFFFFF',
+                text_color:        '#1D4ED8',
+                border_color:      '#BFDBFE',
+                border_radius:     '4px',
+                remove_icon_color: '#60A5FA',
+                remove_hover:      '#EF4444',
+            },
+
+            // --- Selection chips ---
+            selection_chip: {
+                background:        '#EEF2FF',
+                text_color:        '#4338CA',
+                border_color:      '#C7D2FE',
+                border_radius:     '4px',
+                remove_icon_color: '#A5B4FC',
+                remove_hover:      '#EF4444',
+            },
+
+            // --- Clear all link ---
+            clear_all: {
+                color:       '#9CA3AF',
+                hover_color: '#DC2626',
+            },
+
+            // --- Column headers ---
+            header: {
+                background:           '#F3F4F6',
+                text_color:           '#4B5563',
+                font_size:            '0.75rem',
+                font_weight:          '600',
+                letter_spacing:       '0.05em',
+                text_transform:       'uppercase',
+                border_color:         '#D1D5DB',
+                padding:              '12px',
+                sort_icon_color:      '#9CA3AF',
+                sort_icon_active_color: '#3B82F6',
+                resize_handle_color:  '#3B82F6',
+            },
+
+            // --- Data rows ---
+            row: {
+                background:                '#FFFFFF',
+                alt_background:            '#F9FAFB',
+                hover_background:          '#F3F4F6',
+                selected_background:       '#EFF6FF',
+                selected_hover_background: '#DBEAFE',
+                selected_border_color:     '#3B82F6',
+                text_color:                '#111827',
+                font_size:                 '0.875rem',
+                border_color:              '#F3F4F6',    // row divider
+                filled_text_color:         '#6B7280',    // carry-down italic cell
+            },
+
+            // --- Cells ---
+            cell: {
+                padding:      '10px 12px',
+                text_color:   '#111827',
+                border_color: '#E5E7EB',
+            },
+
+            // --- File download button (inside cells) ---
+            file_button: {
+                background:      '#EFF6FF',
+                text_color:      '#2563EB',
+                hover_background:'#DBEAFE',
+                border_color:    '#BFDBFE',
+            },
+
+            // --- Tooltip ---
+            tooltip: {
+                background: '#1F2937',
+                text_color: '#FFFFFF',
+            },
+
+            // --- Selection checkbox/radio ---
+            selection: {
+                accent_color: '#3B82F6',
+            },
+
+            // --- Pagination / load more ---
+            pagination: {
+                load_more_color:       '#2563EB',
+                load_more_hover_color: '#1E40AF',
+                status_text_color:     '#6B7280',
+                more_hint_color:       '#9CA3AF',
+            },
+
+            // --- Empty states ---
+            empty_state: {
+                border_color:            '#D1D5DB',
+                icon_color:              '#D1D5DB',
+                title_color:             '#4B5563',
+                subtext_color:           '#9CA3AF',
+                button_background:       '#3B82F6',
+                button_text:             '#FFFFFF',
+                button_hover_background: '#2563EB',
+            },
+
+            // --- Error state ---
+            error_state: {
+                icon_color:    '#FCA5A5',
+                title_color:   '#DC2626',
+                subtext_color: '#9CA3AF',
+            },
+
+            // --- Skeleton loader ---
+            skeleton: {
+                border_color: '#D1D5DB',
+                header_bg:    '#D1D5DB',
+                cell_bg:      '#E5E7EB',
+                row_border:   '#F3F4F6',
+            },
+
+            // --- Scrollbar ---
+            scrollbar: {
+                width:            '6px',
+                thumb_color:      '#CBD5E1',
+                thumb_hover_color:'#94A3B8',
+                track_color:      'transparent',
+            },
+        },
+
+        filter_modal: {
+            // --- Backdrop ---
+            backdrop_background: 'rgba(0,0,0,0.2)',
+
+            // --- Modal container ---
+            background:    '#FFFFFF',
+            border_radius: '0.5rem',
+            shadow:        '0 25px 50px -12px rgba(0,0,0,0.25)',
+
+            // --- Header ---
+            header_background:   '#F9FAFB',
+            header_text_color:   '#1F2937',
+            header_border_color: '#E5E7EB',
+
+            // --- Condition panel ---
+            condition_heading_color:    '#2563EB',
+            condition_heading_hover:    '#1E40AF',
+            condition_panel_background: '#EFF6FF',
+
+            // --- Value list ---
+            list_background:  '#F9FAFB',
+            list_border_color:'#D1D5DB',
+
+            // --- Rows (date tree + option rows) ---
+            row_hover_background: '#F3F4F6',
+            row_text_color:       '#374151',
+            row_day_text_color:   '#4B5563',
+
+            // --- Select All row ---
+            select_all_border_color: '#F3F4F6',
+            select_all_text_color:   '#6B7280',
+
+            // --- Option hover ---
+            option_hover_background: '#EFF6FF',
+            option_text_color:       '#374151',
+
+            // --- Sort button ---
+            sort_text_color:         '#374151',
+            sort_hover_background:   '#F3F4F6',
+
+            // --- Inputs (search, condition fields) ---
+            input_background:    '#FFFFFF',
+            input_border_color:  '#D1D5DB',
+            input_border_radius: '0.375rem',
+            input_text_color:    '#111827',
+            input_focus_border:  '#60A5FA',
+            input_icon_color:    '#9CA3AF',
+
+            // --- Checkboxes ---
+            checkbox_accent:     '#2563EB',
+            checkbox_border:     '#D1D5DB',
+            checkbox_focus_ring: '#3B82F6',
+
+            label_color:      '#6B7280',
+            label_font_size:  '0.75rem',
+            label_font_weight:'700',
+
+            // --- Footer ---
+            footer_background:    '#F9FAFB',
+            footer_border_color:  '#E5E7EB',
+
+            // --- Buttons ---
+            apply_button: {
+                background:       '#2563EB',
+                text:             '#FFFFFF',
+                hover_background: '#1D4ED8',
+                border_radius:    '0.375rem',
+            },
+            clear_button: {
+                background:       'transparent',
+                text:             '#4B5563',
+                hover_background: '#E5E7EB',
+                border_radius:    '0.375rem',
+            },
+            close_button: {
+                color:       '#6B7280',
+                hover_color: '#EF4444',
+            },
+        },
+    },
+
+    modal: {
+        backdrop_color: '#FFFFFF',
+        backdrop_opacity: '0.4', // Lighter backdrop for a cleaner look
+        backdrop_blur: 'md',
+        
+        header: {
+            background_color: '#FFFFFF',
+            border_color: '#E5E7EB',
+            text_color: '#000000',
+        },
+        
+        footer: {
+            background_color: '#F9FAFB', // Slight tint to distinguish from body
+            border_color: '#E5E7EB',
+        },
+        
+        body: {
+            background_color: '#FFFFFF',
+            text_color: '#111827', // Rich black/gray for readability
+            loader_color: '#B6F09C', // Keeping your accent green for the loader
+        },
+        
+        buttons: {
+            add: {
+                border_color: '#D1D5DB',
+                background_color: '#FFFFFF',
+                text_color: '#000000',
+                hover_opacity: '0.8'
+            },
+            edit: {
+                border_color: '#D1D5DB',
+                background_color: '#FFFFFF',
+                text_color: '#000000',
+                hover_opacity: '0.8'
+            },
+            select: {
+                border_color: '#B6F09C',
+                background_color: '#B6F09C', 
+                text_color: '#000000',
+                hover_opacity: '0.9'
+            },
+            close: {
+                border_color: 'transparent',
+                background_color: '#F3F4F6',
+                text_color: '#4B5563',
+                hover_opacity: '0.9'
+            }
+        }
+    },
+
+    input_method_identity: {
+        'User Input': {
+            accent_color: '#3B82F6',        // blue-500 — editable fields
+            icon: 'Pencil',
+            label_background: '#6b6b6b',
+            label_text_color: '#1E3A5F',
+            label_border_color: '#3B82F6',
+        },
+        'Auto-populated': {
+            accent_color: '#8B5CF6',        // violet-500 — system-filled
+            icon: 'Sparkles',
+            label_background: '#5d5c5c',
+            label_text_color: '#4C1D95',
+            label_border_color: '#8B5CF6',
+        },
+        'Dropdown': {
+            accent_color: '#F59E0B',        // amber-500 — selection fields
+            icon: 'ChevronDown',
+            label_background: '#616161',
+            label_text_color: '#78350F',
+            label_border_color: '#F59E0B',
+        },
+        'Linked Selection': {
+            accent_color: '#10B981',        // emerald-500 — linked records
+            icon: 'Link',
+            label_background: '#374151',
+            label_text_color: '#065F46',
+            label_border_color: '#10B981',
+        },
+        'Linked Addition': {
+            accent_color: '#06B6D4',        // cyan-500 — nested records
+            icon: 'ListPlus',
+            label_background: '#ECFEFF',
+            label_text_color: '#164E63',
+            label_border_color: '#06B6D4',
+        },
+        'File': {
+            accent_color: '#EC4899',        // pink-500 — attachments
+            icon: 'Paperclip',
+            label_background: '#FDF2F8',
+            label_text_color: '#831843',
+            label_border_color: '#EC4899',
+        },
+    },
+}

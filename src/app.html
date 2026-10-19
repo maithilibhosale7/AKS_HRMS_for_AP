@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		
+        <title>AKS HRMS</title>
+        <meta name="description" content="AKS HRMS" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#1E2025" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="AKS HRMS" />
+        <link rel="icon" type="image/svg+xml" href="/img/asian_logo.svg" />
+        <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+        <script>
+            (function () {
+                window.__hrmsInstallPrompt = null;
+                window.addEventListener('beforeinstallprompt', function (event) {
+                    event.preventDefault();
+                    window.__hrmsInstallPrompt = event;
+                    window.dispatchEvent(new Event('hrms-install-ready'));
+                });
+
+                if (!/Android/i.test(navigator.userAgent)) return;
+                if (!('serviceWorker' in navigator)) return;
+                if (navigator.serviceWorker.controller) return;
+                if (sessionStorage.getItem('hrms-sw-ready')) return;
+
+                navigator.serviceWorker.addEventListener('controllerchange', function () {
+                    if (sessionStorage.getItem('hrms-sw-ready')) return;
+                    sessionStorage.setItem('hrms-sw-ready', '1');
+                    location.reload();
+                });
+            })();
+        </script>
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>

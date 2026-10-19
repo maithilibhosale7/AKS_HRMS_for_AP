@@ -1,0 +1,1 @@
+export { default as component } from "../../../../src/routes/AKS_HRMS/User_Dashboard/+page.svelte";

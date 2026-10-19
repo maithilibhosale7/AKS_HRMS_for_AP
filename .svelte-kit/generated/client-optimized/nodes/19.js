@@ -1,0 +1,1 @@
+export { default as component } from "../../../../src/routes/Project_Reports/All_Corporate_Employee_Data/+page.svelte";
