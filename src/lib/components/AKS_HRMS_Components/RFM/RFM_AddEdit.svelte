@@ -216,30 +216,46 @@
     <!-- ── Header fields ─────────────────────────────────────────── -->
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
         <div>
-            <label class="block text-[11px] font-medium text-slate-500 mb-0.5">RFM Date</label>
-            {#if Page_Mode==='View'}<p class="text-sm text-slate-800 py-1">{D.RFM_Date || '—'}</p>
-            {:else}<input type="date" bind:value={D.RFM_Date} class="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-indigo-400"/>{/if}
+            {#if Page_Mode==='View'}
+                <p class="block text-[11px] font-medium text-slate-500 mb-0.5">RFM Date</p>
+                <p class="text-sm text-slate-800 py-1">{D.RFM_Date || '—'}</p>
+            {:else}
+                <label class="block text-[11px] font-medium text-slate-500 mb-0.5" for="rfm-date">RFM Date</label>
+                <input id="rfm-date" type="date" bind:value={D.RFM_Date} class="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-indigo-400"/>
+            {/if}
         </div>
         <div>
-            <label class="block text-[11px] font-medium text-slate-500 mb-0.5">Department</label>
-            {#if Page_Mode==='View'}<p class="text-sm text-slate-800 py-1">{D.Department_Name || '—'}</p>
-            {:else}<select bind:value={D.Department_ID} on:change={onDeptChange} class="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-indigo-400">
-                <option value="">Select</option>
-                {#each Object.entries(Department_Data) as [id,d]}<option value={id}>{d.Department_Name}</option>{/each}
-            </select>{/if}
+            {#if Page_Mode==='View'}
+                <p class="block text-[11px] font-medium text-slate-500 mb-0.5">Department</p>
+                <p class="text-sm text-slate-800 py-1">{D.Department_Name || '—'}</p>
+            {:else}
+                <label class="block text-[11px] font-medium text-slate-500 mb-0.5" for="rfm-department">Department</label>
+                <select id="rfm-department" bind:value={D.Department_ID} on:change={onDeptChange} class="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-indigo-400">
+                    <option value="">Select</option>
+                    {#each Object.entries(Department_Data) as [id,d]}<option value={id}>{d.Department_Name}</option>{/each}
+                </select>
+            {/if}
         </div>
         <div>
-            <label class="block text-[11px] font-medium text-slate-500 mb-0.5">Designation</label>
-            {#if Page_Mode==='View'}<p class="text-sm text-slate-800 py-1">{D.Designation_Name || '—'}</p>
-            {:else}<select bind:value={D.Designation_ID} on:change={onDesigChange} class="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-indigo-400">
-                <option value="">Select</option>
-                {#each Object.entries(Designation_Data) as [id,d]}<option value={id}>{d.Designation_Name}</option>{/each}
-            </select>{/if}
+            {#if Page_Mode==='View'}
+                <p class="block text-[11px] font-medium text-slate-500 mb-0.5">Designation</p>
+                <p class="text-sm text-slate-800 py-1">{D.Designation_Name || '—'}</p>
+            {:else}
+                <label class="block text-[11px] font-medium text-slate-500 mb-0.5" for="rfm-designation">Designation</label>
+                <select id="rfm-designation" bind:value={D.Designation_ID} on:change={onDesigChange} class="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-indigo-400">
+                    <option value="">Select</option>
+                    {#each Object.entries(Designation_Data) as [id,d]}<option value={id}>{d.Designation_Name}</option>{/each}
+                </select>
+            {/if}
         </div>
         <div>
-            <label class="block text-[11px] font-medium text-slate-500 mb-0.5">Budget (₹)</label>
-            {#if Page_Mode==='View'}<p class="text-sm text-slate-800 py-1">₹{D.Budget ?? 0}</p>
-            {:else}<input type="number" step="0.01" bind:value={D.Budget} class="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-indigo-400"/>{/if}
+            {#if Page_Mode==='View'}
+                <p class="block text-[11px] font-medium text-slate-500 mb-0.5">Budget (₹)</p>
+                <p class="text-sm text-slate-800 py-1">₹{D.Budget ?? 0}</p>
+            {:else}
+                <label class="block text-[11px] font-medium text-slate-500 mb-0.5" for="rfm-budget">Budget (₹)</label>
+                <input id="rfm-budget" type="number" step="0.01" bind:value={D.Budget} class="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-indigo-400"/>
+            {/if}
         </div>
     </div>
 
@@ -301,10 +317,10 @@
                         <!-- Source + About (editable on Received tab) -->
                         {#if activeTab === 'Received'}
                             <div class="grid grid-cols-3 gap-2 mb-2">
-                                <div><label class="block text-[10px] text-slate-400 mb-0.5">Source</label>
-                                    <input type="text" bind:value={D.Candidate_Data[idx].Source} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
-                                <div class="col-span-2"><label class="block text-[10px] text-slate-400 mb-0.5">About</label>
-                                    <input type="text" bind:value={D.Candidate_Data[idx].About_Candidate} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
+                                <div><label class="block text-[10px] text-slate-400 mb-0.5" for="cand-{idx}-source">Source</label>
+                                    <input id="cand-{idx}-source" type="text" bind:value={D.Candidate_Data[idx].Source} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
+                                <div class="col-span-2"><label class="block text-[10px] text-slate-400 mb-0.5" for="cand-{idx}-about">About</label>
+                                    <input id="cand-{idx}-about" type="text" bind:value={D.Candidate_Data[idx].About_Candidate} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
                             </div>
                             <AKS_HRMS_Attachment bind:value={D.Candidate_Data[idx].CV}/>
                         {/if}
@@ -312,10 +328,10 @@
                         <!-- Shortlist fields -->
                         {#if activeTab === 'Shortlisted' && (c.Status === 'Shortlisted')}
                             <div class="grid grid-cols-3 gap-2 mb-2">
-                                <div><label class="block text-[10px] text-slate-400 mb-0.5">Shortlist Date</label>
-                                    <input type="date" bind:value={D.Candidate_Data[idx].Shortlist_Date} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
-                                <div class="col-span-2"><label class="block text-[10px] text-slate-400 mb-0.5">Comments</label>
-                                    <input type="text" bind:value={D.Candidate_Data[idx].Shortlist_Comments} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
+                                <div><label class="block text-[10px] text-slate-400 mb-0.5" for="cand-{idx}-shortlist-date">Shortlist Date</label>
+                                    <input id="cand-{idx}-shortlist-date" type="date" bind:value={D.Candidate_Data[idx].Shortlist_Date} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
+                                <div class="col-span-2"><label class="block text-[10px] text-slate-400 mb-0.5" for="cand-{idx}-shortlist-comments">Comments</label>
+                                    <input id="cand-{idx}-shortlist-comments" type="text" bind:value={D.Candidate_Data[idx].Shortlist_Comments} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
                             </div>
                         {/if}
 
@@ -323,10 +339,10 @@
                         {#each [['Interview 1','Interviewed1','Interview_Date_1','Interview_Comments_1'],['Interview 2','Interviewed2','Interview_Date_2','Interview_Comments_2'],['Interview 3','Interviewed3','Interview_Date_3','Interview_Comments_3']] as [tabName, stage, dateKey, commentsKey]}
                             {#if activeTab === tabName && c.Status === stage}
                                 <div class="grid grid-cols-3 gap-2 mb-2">
-                                    <div><label class="block text-[10px] text-slate-400 mb-0.5">{tabName} Date</label>
-                                        <input type="date" bind:value={D.Candidate_Data[idx][dateKey]} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
-                                    <div class="col-span-2"><label class="block text-[10px] text-slate-400 mb-0.5">Comments</label>
-                                        <input type="text" bind:value={D.Candidate_Data[idx][commentsKey]} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
+                                    <div><label class="block text-[10px] text-slate-400 mb-0.5" for="cand-{idx}-{dateKey}">{tabName} Date</label>
+                                        <input id="cand-{idx}-{dateKey}" type="date" bind:value={D.Candidate_Data[idx][dateKey]} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
+                                    <div class="col-span-2"><label class="block text-[10px] text-slate-400 mb-0.5" for="cand-{idx}-{commentsKey}">Comments</label>
+                                        <input id="cand-{idx}-{commentsKey}" type="text" bind:value={D.Candidate_Data[idx][commentsKey]} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
                                 </div>
                             {/if}
                         {/each}
@@ -334,26 +350,26 @@
                         <!-- Offer fields -->
                         {#if activeTab === 'Offered' && c.Status === 'Offered'}
                             <div class="grid grid-cols-4 gap-2 mb-2">
-                                <div><label class="block text-[10px] text-slate-400 mb-0.5">Offer Date</label>
-                                    <input type="date" bind:value={D.Candidate_Data[idx].Offer_Date} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
-                                <div class="col-span-2"><label class="block text-[10px] text-slate-400 mb-0.5">Comments</label>
-                                    <input type="text" bind:value={D.Candidate_Data[idx].Offer_Comments} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
-                                <div><label class="block text-[10px] text-slate-400 mb-0.5">Amount</label>
-                                    <input type="number" step="0.01" bind:value={D.Candidate_Data[idx].Offer_Amount} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
+                                <div><label class="block text-[10px] text-slate-400 mb-0.5" for="cand-{idx}-offer-date">Offer Date</label>
+                                    <input id="cand-{idx}-offer-date" type="date" bind:value={D.Candidate_Data[idx].Offer_Date} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
+                                <div class="col-span-2"><label class="block text-[10px] text-slate-400 mb-0.5" for="cand-{idx}-offer-comments">Comments</label>
+                                    <input id="cand-{idx}-offer-comments" type="text" bind:value={D.Candidate_Data[idx].Offer_Comments} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
+                                <div><label class="block text-[10px] text-slate-400 mb-0.5" for="cand-{idx}-offer-amount">Amount</label>
+                                    <input id="cand-{idx}-offer-amount" type="number" step="0.01" bind:value={D.Candidate_Data[idx].Offer_Amount} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
                             </div>
                         {/if}
 
                         <!-- Accepted fields -->
                         {#if activeTab === 'Accepted' && c.Status === 'Accepted'}
                             <div class="grid grid-cols-4 gap-2 mb-2">
-                                <div><label class="block text-[10px] text-slate-400 mb-0.5">Accepted Date</label>
-                                    <input type="date" bind:value={D.Candidate_Data[idx].Accepted_Date} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
-                                <div><label class="block text-[10px] text-slate-400 mb-0.5">Amount</label>
-                                    <input type="number" step="0.01" bind:value={D.Candidate_Data[idx].Accepted_Amount} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
-                                <div><label class="block text-[10px] text-slate-400 mb-0.5">Joining Date</label>
-                                    <input type="date" bind:value={D.Candidate_Data[idx].Proposed_Joining_Date} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
-                                <div><label class="block text-[10px] text-slate-400 mb-0.5">Comments</label>
-                                    <input type="text" bind:value={D.Candidate_Data[idx].Accepted_Comments} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
+                                <div><label class="block text-[10px] text-slate-400 mb-0.5" for="cand-{idx}-accepted-date">Accepted Date</label>
+                                    <input id="cand-{idx}-accepted-date" type="date" bind:value={D.Candidate_Data[idx].Accepted_Date} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
+                                <div><label class="block text-[10px] text-slate-400 mb-0.5" for="cand-{idx}-accepted-amount">Amount</label>
+                                    <input id="cand-{idx}-accepted-amount" type="number" step="0.01" bind:value={D.Candidate_Data[idx].Accepted_Amount} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
+                                <div><label class="block text-[10px] text-slate-400 mb-0.5" for="cand-{idx}-joining-date">Joining Date</label>
+                                    <input id="cand-{idx}-joining-date" type="date" bind:value={D.Candidate_Data[idx].Proposed_Joining_Date} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
+                                <div><label class="block text-[10px] text-slate-400 mb-0.5" for="cand-{idx}-accepted-comments">Comments</label>
+                                    <input id="cand-{idx}-accepted-comments" type="text" bind:value={D.Candidate_Data[idx].Accepted_Comments} class="w-full border border-slate-200 rounded-lg px-2 py-1.5 text-xs"/></div>
                             </div>
                             <!-- Convert to Onboarding button -->
                             {#if !c.Converted_to_Onboarding}

@@ -4,7 +4,7 @@
   //
   import { page, session } from '$app/stores';
   import { onMount } from 'svelte';
-  import AutoResizeTextarea from '$lib/Components/AutoResizeTextArea.svelte';
+  import AutoResizeTextarea from '$lib/components/AutoResizeTextArea.svelte';
   import { API_PATHS } from '../lib/API_PATHS';
   import { Live_Data_Storage } from '../stores/Live_Data_Storage';
 
