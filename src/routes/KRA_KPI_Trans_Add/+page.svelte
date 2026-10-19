@@ -5,7 +5,7 @@
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
   import { onMount } from 'svelte';
-  import AutoResizeTextarea from '$lib/Components/AutoResizeTextArea.svelte';
+  import AutoResizeTextarea from '$lib/components/AutoResizeTextArea.svelte';
   import { API_PATHS } from '$lib/API_PATHS';
 
 import Pms_Rating_Form from '$lib/components/AKS_HRMS_Components/PMS/Pms_Rating_Form.svelte';

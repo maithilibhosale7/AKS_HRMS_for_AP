@@ -1,1 +1,0 @@
-import{af as u,b as g,ag as o,h as t,Y as _,Z as i,ah as l,a2 as d,X as p,a4 as m}from"./DBEmdN4K.js";function E(n,r){let a=null,f=t;var s;if(t){a=p;for(var e=m(document.head);e!==null&&(e.nodeType!==_||e.data!==n);)e=i(e);if(e===null)l(!1);else{var y=i(e);e.remove(),d(y)}}t||(s=document.head.appendChild(u()));try{g(()=>r(s),o)}finally{f&&(l(!0),d(a))}}export{E as h};

@@ -1,1 +1,0 @@
-import{w as n}from"./D-AIaRcu.js";const s=n([]);function d(t,o="info",a=5e3){const e=new Date().valueOf()+t;return s.update(i=>[{id:e,msg:t,type:o,removeAfter:a},...i]),setTimeout(()=>{r(e)},a),e}function r(t){s.update(o=>o.filter(a=>a.id!==t))}export{d as a,r,s as t};

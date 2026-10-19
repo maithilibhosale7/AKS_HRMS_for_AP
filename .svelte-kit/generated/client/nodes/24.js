@@ -1,1 +1,0 @@
-export { default as component } from "../../../../src/routes/Project_Reports/Deviation_Report/+page.svelte";
