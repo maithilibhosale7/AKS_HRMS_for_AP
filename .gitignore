@@ -1,0 +1,31 @@
+# Dependencies — always install fresh on CI/Vercel (never commit)
+node_modules/
+
+# SvelteKit / Vite build output
+.svelte-kit/
+build/
+.vercel/
+dist/
+.output/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs and debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Test / coverage
+coverage/

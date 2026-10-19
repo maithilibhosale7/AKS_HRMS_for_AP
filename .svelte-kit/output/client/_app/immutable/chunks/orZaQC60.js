@@ -1,1 +1,0 @@
-import{d as t,w as c}from"./D-AIaRcu.js";const l=c([]);t(l,e=>e.length>0);t(l,e=>e[e.length-1]??null);function i(e,o={},a={}){l.update(s=>[...s,{component:e,props:o,size:a.size??"xl",title:a.title??"",closeable:a.closeable??!0,id:crypto.randomUUID()}])}function n(){l.update(e=>e.slice(0,-1))}function r(){l.set([])}export{n as a,r as c,l as m,i as o};
