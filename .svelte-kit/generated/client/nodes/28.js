@@ -1,0 +1,1 @@
+export { default as component } from "../../../../src/routes/Project_Setup/Module_Access/+page.svelte";

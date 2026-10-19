@@ -1,0 +1,1 @@
+import{w as s}from"./D-AIaRcu.js";const a={User_Information:{},Page_Information:{}},e=s(a);if(typeof window<"u"){const t=sessionStorage.getItem("Live_Data");t&&e.set(JSON.parse(t)),e.subscribe(i=>{sessionStorage.setItem("Live_Data",JSON.stringify(i))})}export{e as L};

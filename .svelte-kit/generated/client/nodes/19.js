@@ -1,0 +1,1 @@
+export { default as component } from "../../../../src/routes/Project_Documents/PMS_Report/+page.svelte";

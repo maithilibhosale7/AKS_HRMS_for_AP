@@ -1,0 +1,8 @@
+const VITE_API_BASE_URL = "http://localhost/AKS_HRMS";
+const BACKEND_API_KEY = "e82bfa69ba2671fb5e2a6f264958a76822505e03398cb0e8f1853d5e72b89d73";
+const JWT_SECRET = "e0ee750449020fe4a1371a8bc54bf3bc3a694d28f359ba8c9e9435c4e5c3f57f";
+export {
+  BACKEND_API_KEY as B,
+  JWT_SECRET as J,
+  VITE_API_BASE_URL as V
+};
