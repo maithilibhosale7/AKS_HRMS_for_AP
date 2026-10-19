@@ -1,1 +1,0 @@
-export { default as component } from "../../../../src/routes/AKS_HRMS/+layout.svelte";
